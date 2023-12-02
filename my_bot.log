@@ -1,0 +1,106 @@
+2023-12-02 23:24:38,369 - aiogram - INFO - Bot: Test uchun qilingan bot [@Shunga_shunchami_bot]
+2023-12-02 23:24:38,648 - aiogram - WARNING - Updates were skipped successfully.
+2023-12-02 23:24:38,648 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2023-12-02 23:25:52,834 - aiogram.dispatcher.dispatcher - INFO - Stop polling...
+2023-12-02 23:25:52,834 - aiogram - WARNING - Goodbye!
+2023-12-02 23:31:33,435 - aiogram - INFO - Bot: Test uchun qilingan bot [@Shunga_shunchami_bot]
+2023-12-02 23:31:33,734 - aiogram - WARNING - Updates were skipped successfully.
+2023-12-02 23:31:33,734 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2023-12-02 23:38:23,854 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-76' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=Exception('Error: ', APIRemovedInV1('\n\nYou tried to access openai.Image, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n'))>
+Traceback (most recent call last):
+  File "D:\Source\projects\python\telegram_bots\dalle_bot\dalle_client.py", line 33, in create_sample
+    response = openai.Image.create(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\openai\lib\_old_api.py", line 39, in __call__
+    raise APIRemovedInV1(symbol=self._symbol)
+openai.lib._old_api.APIRemovedInV1: 
+
+You tried to access openai.Image, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.
+
+You can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. 
+
+Alternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`
+
+A detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Source\projects\python\telegram_bots\dalle_bot\main.py", line 157, in generate_image
+    image_path = dalle_client.create_sample(prompt=prompt, size=Image_size, number=int(number_of_sample))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Source\projects\python\telegram_bots\dalle_bot\dalle_client.py", line 43, in create_sample
+    raise Exception("Error: ", e)
+Exception: ('Error: ', APIRemovedInV1('\n\nYou tried to access openai.Image, but this is no longer supported in openai>=1.0.0 - see the README at https://github.com/openai/openai-python for the API.\n\nYou can run `openai migrate` to automatically upgrade your codebase to use the 1.0.0 interface. \n\nAlternatively, you can pin your installation to the old version, e.g. `pip install openai==0.28`\n\nA detailed migration guide is available here: https://github.com/openai/openai-python/discussions/742\n'))
+2023-12-02 23:38:54,941 - aiogram.dispatcher.dispatcher - INFO - Stop polling...
+2023-12-02 23:38:54,942 - aiogram - WARNING - Goodbye!
+2023-12-02 23:39:11,308 - aiogram - INFO - Bot: Test uchun qilingan bot [@Shunga_shunchami_bot]
+2023-12-02 23:39:11,561 - aiogram - WARNING - Updates were skipped successfully.
+2023-12-02 23:39:11,561 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2023-12-02 23:39:20,075 - openai - INFO - error_code=account_deactivated error_message='The OpenAI account associated with this API key has been deactivated. If you are the developer for this OpenAI app, please check your email for more information. If you are seeing this error while using another app or site, please reach out to them for more help.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-12-02 23:39:20,091 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=Exception('Error: ', AuthenticationError(message='The OpenAI account associated with this API key has been deactivated. If you are the developer for this OpenAI app, please check your email for more information. If you are seeing this error while using another app or site, please reach out to them for more help.', http_status=401, request_id=None))>
+Traceback (most recent call last):
+  File "D:\Source\projects\python\telegram_bots\dalle_bot\dalle_client.py", line 33, in create_sample
+    response = openai.Image.create(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\openai\api_resources\image.py", line 39, in create
+    response, _, api_key = requestor.request(
+                           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\openai\api_requestor.py", line 298, in request
+    resp, got_stream = self._interpret_response(result, stream)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\openai\api_requestor.py", line 700, in _interpret_response
+    self._interpret_response_line(
+  File "C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\openai\api_requestor.py", line 765, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.AuthenticationError: The OpenAI account associated with this API key has been deactivated. If you are the developer for this OpenAI app, please check your email for more information. If you are seeing this error while using another app or site, please reach out to them for more help.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kamro\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Source\projects\python\telegram_bots\dalle_bot\main.py", line 157, in generate_image
+    image_path = dalle_client.create_sample(prompt=prompt, size=Image_size, number=int(number_of_sample))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Source\projects\python\telegram_bots\dalle_bot\dalle_client.py", line 43, in create_sample
+    raise Exception("Error: ", e)
+Exception: ('Error: ', AuthenticationError(message='The OpenAI account associated with this API key has been deactivated. If you are the developer for this OpenAI app, please check your email for more information. If you are seeing this error while using another app or site, please reach out to them for more help.', http_status=401, request_id=None))
+2023-12-02 23:40:38,684 - aiogram.dispatcher.dispatcher - INFO - Stop polling...
+2023-12-02 23:40:38,684 - aiogram - WARNING - Goodbye!
+2023-12-02 23:40:42,338 - aiogram - INFO - Bot: Test uchun qilingan bot [@Shunga_shunchami_bot]
+2023-12-02 23:40:42,619 - aiogram - WARNING - Updates were skipped successfully.
+2023-12-02 23:40:42,619 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2023-12-02 23:44:51,299 - aiogram.dispatcher.dispatcher - INFO - Stop polling...
+2023-12-02 23:44:51,300 - aiogram - WARNING - Goodbye!
